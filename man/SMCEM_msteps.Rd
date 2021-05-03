@@ -74,10 +74,10 @@ Sigma_stat=matrix(c(0.33,0.31,0.3,0.31,0.335,0.295,0.3,0.295,0.32),3,3)
 
 #Imputing Missing Values and Updating Parameter Estimates
 #Single Iteration (SEM)
-SEM1=SMCEM_onestep(Y=Y8,mu= mu_stat,Sigma=A,df=df,nob=1)
+SEM1=SMCEM_onestep(Y=Y8,mu= mu_stat,Sigma=Sigma_stat,df=df,nob=1)
 
 #Single Iteration (MCEM)
-MCEM1=SMCEM_onestep(Y=Y8,mu= mu_stat,Sigma=A,df=df,nob=100)
+MCEM1=SMCEM_onestep(Y=Y8,mu= mu_stat,Sigma=Sigma_stat,df=df,nob=100)
 
 #Multiple Iterations (SEM)
 SEM=SMCEM_msteps(Y=Y8,mu= mu_stat,Sigma= Sigma_stat,df=df,nob=1,K=1000)
