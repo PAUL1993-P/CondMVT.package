@@ -54,7 +54,6 @@ The evaluated distribution function is returned with attributes
 
 \seealso{\code{\link{dcmvt}()},\code{\link{rcmvt}()},\code{\link{pmvt}()}
         }
-
 \examples{
 n <- 10
 df=3
