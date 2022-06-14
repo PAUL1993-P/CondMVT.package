@@ -1,6 +1,5 @@
 \name{EM_Umsteps}
 \alias{EM_Umsteps}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Data Imputation Using EM (Multiple Iterations, Degrees of Freedom Unknown)
 }
@@ -12,7 +11,6 @@ EM_Uonestep(Y,mu,Sigma,df,e)
 EM_Umsteps(Y,mu,Sigma,df,K,e,error)
 
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
     \item{Y}{the multivariate t dataset}
   \item{mu}{	the location vector, which must be specified. In cases where it is unknown, starting values are provided.}
@@ -23,33 +21,10 @@ EM_Umsteps(Y,mu,Sigma,df,K,e,error)
   \item{K}{the number of iterations, which must be specified.}
 
 }
-
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \references{
 Kinyanjui, P. K., Tamba, C. L., Orawo, L. A. O., & Okenye, J. O. (2020). Missing data imputation in multivariate t distribution with unknown degrees of freedom using expectation maximization algorithm and its stochastic variants. Model Assisted Statistics and Applications, 15(3), 263-272.
 
 Liu, C. and Rubin, D. B. (1995). ML estimation of the t distribution using EM and its extensions, ECM and ECME. Statistica Sinica, 19-39.
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 
@@ -86,7 +61,3 @@ EMU$df	    #Updated degrees of freedom.
 EMU$K1	#number of iterations the algorithm takes to converge
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ EM }% use one of  RShowDoc("KEYWORDS")
-\keyword{ unknown degrees of freedom }% __ONLY ONE__ keyword per line
