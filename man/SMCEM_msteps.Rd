@@ -87,6 +87,6 @@ for (l in 101:1000){
 round((T_mu/900),4) #updated location vector
 round((T_Sigma/900),4) #updated scatter matrix
 T_Data1= T_Data/900 #complete dataset as an average of (K-100)
-                    complete datasets for the various iterations.
+                    #complete datasets for the various iterations.
 
 }
