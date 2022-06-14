@@ -4,8 +4,7 @@ Title: Conditional Multivariate t Distribution
 Version: 0.1.0
 Author: Paul Kimani Kinyanjui, Cox Lwaka Tamba, Justin Obwoge Okenye
 Maintainer: Paul Kimani Kinyanjui <kinyanjui.access@gmail.com>
-Description: The packages helps sample from the conditional multivariate t distribution
-    Use four spaces when indenting paragraphs within the Description.
+Description: The packages helps sample from the conditional multivariate t distribution.
 License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.1.0
