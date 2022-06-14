@@ -1,6 +1,5 @@
 \name{SMCEM_Umsteps}
 \alias{SMCEM_Umsteps}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{Data Imputation Using SEM and MCEM (Multiple Iterations; Degrees of Freedom Unknown)
 
 }
@@ -21,31 +20,8 @@ SMCEM_Umsteps(Y,mu,Sigma,df,nob,K,e)
   \item{K}{the number of iterations, which must be specified.}
   \item{e}{tolerance level for convergence of the bisection method for estimation of df. }
 }
-
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \references{
 Kinyanjui, P. K., Tamba, C. L., Orawo, L. A. O., & Okenye, J. O. (2020). Missing data imputation in multivariate t distribution with unknown degrees of freedom using expectation maximization algorithm and its stochastic variants. Model Assisted Statistics and Applications, 15(3), 263-272.
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # 3-dimensional multivariate t distribution
@@ -110,8 +86,3 @@ udf=mean(MCEMU$dfchain[101:1000])	#updated degrees of freedom
 T_Data1=  T_Data/900	#complete dataset as an average of (K-100) complete datasets for the various iterations.
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ SEM }% use one of  RShowDoc("KEYWORDS")
-\keyword{ MCEM }% __ONLY ONE__ keyword per line
-\keyword{ unknown degrees of freedom }% __ONLY ONE__ keyword per line
