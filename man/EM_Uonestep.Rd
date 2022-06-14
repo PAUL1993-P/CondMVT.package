@@ -1,6 +1,5 @@
 \name{EM_Uonestep}
 \alias{EM_Uonestep}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Data Imputation Using EM (Single Iteration, Degrees of Freedom Unknown)
 }
@@ -10,7 +9,6 @@ This sub-package constitutes the subroutines for EM algorithm (for a single iter
 \usage{
 EM_Uonestep(Y,mu,Sigma,df,e)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
  \item{Y}{the multivariate t dataset}
   \item{mu}{	the location vector, which must be specified. In cases where it is unknown, starting values are provided.}
@@ -18,32 +16,10 @@ EM_Uonestep(Y,mu,Sigma,df,e)
   \item{df}{degrees of freedom, which must be specified.}
    \item{e}{tolerance level for convergence of the bisection method for estimation of df. }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \references{
 Kinyanjui, P. K., Tamba, C. L., Orawo, L. A. O., & Okenye, J. O. (2020). Missing data imputation in multivariate t distribution with unknown degrees of freedom using expectation maximization algorithm and its stochastic variants. Model Assisted Statistics and Applications, 15(3), 263-272.
 
 Liu, C., & Rubin, D. B. (1995). ML estimation of the t distribution using EM and its extensions, ECM and ECME. Statistica Sinica, 19-39.
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # 3-dimensional multivariate t distribution
@@ -73,7 +49,3 @@ EMU1$Y2    #Newly completed Dataset (with imputed values)
 EMU1$mu	   #updated location vector
 EMU1$Sigma #updated scatter matrix
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
