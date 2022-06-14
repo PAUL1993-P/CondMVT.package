@@ -52,7 +52,8 @@ The evaluated distribution function is returned with attributes
 \item{error}{estimated absolute error and}
 \item{msg }{Normal Completion}
 
-\seealso{\code{\link{dcmvt}()},\code{\link{rcmvt}()},\code{\link{pmvt}()}}
+\seealso{\code{\link{dcmvt}()},\code{\link{rcmvt}()},\code{\link{pmvt}()}
+        }
 
 \examples{
 n <- 10
