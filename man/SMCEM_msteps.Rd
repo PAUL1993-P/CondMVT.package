@@ -1,6 +1,5 @@
 \name{SMCEM_msteps}
 \alias{SMCEM_msteps}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{Data Imputation Using SEM and MCEM (Multiple Iterations, Degrees of Freedom Known)
 
 }
@@ -12,7 +11,6 @@ SMCEM_onestep(Y,mu,Sigma,df,nob)
 SMCEM_msteps(Y,mu,Sigma,df, nob,K)
 
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{Y}{the multivariate t dataset}
   \item{mu}{	the location vector, which must be specified. In cases where it is unknown, starting values are provided.}
@@ -20,16 +18,6 @@ SMCEM_msteps(Y,mu,Sigma,df, nob,K)
   \item{df}{degrees of freedom, which must be specified.}
   \item{nob}{number of draws in the E-step}
   \item{K}{the number of iterations, which must be specified.}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
 }
 \references{
 Karimi, B., Lavielle, M., and Moulines, É. (2019). On the Convergence Properties of the Mini-Batch EM and MCEM Algorithms.
@@ -39,18 +27,6 @@ Kinyanjui, P.K., Tamba, C.L., & Okenye, J.O. (2021). Missing Data Imputation in 
 Levine, R. A. and Casella, G. (2001). Implementations of the Monte Carlo EM algorithm. Journal of Computational and Graphical Statistics, 10(3), 422-439.
 
 Nielsen, S.F. (2000). The stochastic EM algorithm: estimation and asymptotic results. Bernoulli, 6(3), 457-489.
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # 3-dimensional multivariate t distribution
@@ -114,7 +90,3 @@ T_Data1= T_Data/900 #complete dataset as an average of (K-100)
                     complete datasets for the various iterations.
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
