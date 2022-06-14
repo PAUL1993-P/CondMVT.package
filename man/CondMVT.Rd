@@ -35,4 +35,3 @@ is the fully-joint multivariate t distribution with location vector equal to mea
  CondMVT(mean=rep(1,n), sigma=A, df=df, dep=3, given=c(1,4,7,9), X=c(1,1,0,-1))
 
 }
-\keyword{}
