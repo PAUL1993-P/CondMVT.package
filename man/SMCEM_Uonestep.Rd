@@ -1,6 +1,5 @@
 \name{SMCEM_Uonestep}
 \alias{SMCEM_Uonestep}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Data Imputation Using SEM and MCEM (Single Iteration; Degrees of Freedom Unknown)
 }
@@ -10,7 +9,6 @@ This sub-package provides subroutines for implementation of SEM and MCEM techniq
 \usage{
 SMCEM_Uonestep(Y,mu,Sigma,df,nob,e)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
  \item{Y}{the multivariate t dataset}
   \item{mu}{	the location vector, which must be specified. In cases where it is unknown, starting values are provided.}
@@ -19,30 +17,8 @@ SMCEM_Uonestep(Y,mu,Sigma,df,nob,e)
   \item{nob}{number of draws in the E-step}
   \item{e}{tolerance level for convergence of the bisection method for estimation of df. }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \references{
 Kinyanjui, P. K., Tamba, C. L., Orawo, L. A. O., & Okenye, J. O. (2020). Missing data imputation in multivariate t distribution with unknown degrees of freedom using expectation maximization algorithm and its stochastic variants. Model Assisted Statistics and Applications, 15(3), 263-272.
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # 3-dimensional multivariate t distribution
@@ -80,8 +56,3 @@ MCEMU1$Y2     #Newly completed Dataset (with imputed values)
 MCEMU1$mu	    #updated location vector
 MCEMU1$Sigma  #updated scatter matrix
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ SEM }% use one of  RShowDoc("KEYWORDS")
-\keyword{ MCEM }% __ONLY ONE__ keyword per line
-\keyword{ unknown degrees of freedom }% __ONLY ONE__ keyword per line
