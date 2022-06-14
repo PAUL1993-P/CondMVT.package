@@ -29,4 +29,5 @@ TT=Y7 #Complete Dataset
 
 #Introduce MAR Data
 Y8= MISS(TT,20) #The newly created incomplete dataset.
+Y8  
 }
