@@ -1,6 +1,5 @@
 \name{EM_msteps}
 \alias{EM_msteps}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{Data Imputation Using EM (Multiple Iterations; Degrees of Freedom Known)
 }
 \description{
@@ -10,7 +9,6 @@ The sub-package contains subroutines for imputation of missing values as well as
 EM_onestep(Y,mu,Sigma,df)
 EM_msteps(Y,mu,Sigma,df,K,error)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
     \item{Y}{the multivariate t dataset}
   \item{mu}{the location vector, which must be specified. In cases where it is unknown, starting values are provided.}
@@ -19,30 +17,8 @@ EM_msteps(Y,mu,Sigma,df,K,error)
   \item{K}{the number of iterations, which must be specified.}
    \item{error}{tolerance level for convergence of the EM algorithm.}
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \references{
 Kinyanjui, P.K., Tamba, C.L., & Okenye, J.O. (2021). Missing Data Imputation in a t -Distribution with Known Degrees of Freedom Via Expectation Maximization Algorithm and Its Stochastic Variants. International Journal of Applied Mathematics and Statistics.
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # 3-dimensional multivariate t distribution
@@ -78,7 +54,3 @@ EM$Sigma #updated scatter matrix
 EM$K1	#number of iterations the algorithm takes to converge
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
