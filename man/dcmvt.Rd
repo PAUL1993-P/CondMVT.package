@@ -48,4 +48,6 @@ rcmvt(n=10, mean=rep(1,n), sigma=A,df=df, dep=c(2,5),
 
 rcmvt(n=10, mean=rep(1,n), sigma=A,df=df,dep=3,
          given=c(1,4,7,9,10), X=c(1,1,0,0,-1),
-         method="chol")}
+         method="chol")
+
+}
