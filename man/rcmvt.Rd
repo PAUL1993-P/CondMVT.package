@@ -1,8 +1,6 @@
 \name{rcmvt}
 \alias{rcmvt}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{Conditional Multivariate t Density and Random Deviates
-%%  ~~function to do ... ~~
 }
 \description{
 These functions provide the density function and a random number generator for the conditional multivariate t distribution, [Y given X], where Z = (X,Y) is the fully-joint multivariate t distribution with location vector equal to mean and scatter matrix sigma.
@@ -14,7 +12,6 @@ rcmvt(n, mean, sigma,df,dependent.ind, given.ind,
 	X.given, check.sigma=TRUE,
 	method=c("eigen", "svd", "chol"))
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
 \item{x}{vector or matrix of quantiles of Y. If x is a matrix, each row is taken to be a quantile.}
 \item{n}{number of random deviates.}
@@ -28,33 +25,6 @@ rcmvt(n, mean, sigma,df,dependent.ind, given.ind,
 \item{log}{logical; if TRUE, densities d are given as log(d).}
 \item{method}{string specifying the matrix decomposition used to determine the matrix root of sigma. Possible methods are eigenvalue decomposition ("eigen", default), singular value decomposition ("svd"), and Cholesky decomposition ("chol"). The Cholesky is typically fastest, not by much though.}
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-
-}
-
 \examples{
 # 10-dimensional multivariate t distribution
 n <- 10
@@ -82,9 +52,4 @@ rcmvt(n=10, mean=rep(1,n), sigma=A,df=df, dep=c(2,5),
 rcmvt(n=10, mean=rep(1,n), sigma=A,df=df, dep=3,
          given=c(1,4,7,9,10), X=c(1,1,0,0,-1),
          method="chol")
-
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
