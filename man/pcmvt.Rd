@@ -63,12 +63,10 @@ A <- tcrossprod(A,A) #A %*% t(A)
 pcmvt(lower=-Inf, upper=1, mean=rep(1,n), sigma=A, df=df,	dependent.ind=3, given.ind=c(1,4,7,9,10),
       X.given=c(1,1,0,0,-1))
 
-
 pcmvt(lower=-Inf, upper=c(1,2), mean=rep(1,n),
       sigma=A,df=df, dep=c(2,5), given=c(1,4,7,9,10),
       X=c(1,1,0,0,-1))
 
 pcmvt(lower=-Inf, upper=c(1,2), mean=rep(1,n), sigma=A,df=df,
       dep=c(2,5))
-
 }
