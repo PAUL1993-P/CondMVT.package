@@ -2,11 +2,11 @@
 \alias{pcmvt}
 \title{Conditional Multivariate t Distribution
 }
-\description{Computes the distribution function of the conditional multivariate t, [Y given X], where Z = (X,Y) is the fully-joint multivariate t distribution with mean equal to location vector, df equal to degrees of freedom and scatter matrix sigma.
-
+\description{Computes the distribution function of the conditional multivariate t, [Y given X], where Z = (X,Y) is the fully-joint multivariate t distribution with mean equal to location vector, df equal to degrees of freedom and scatter matrix sigma. Computations are based on algorithms by Genz and Bretz.
 }
 \usage{
-pcmvt(lower = -Inf, upper = Inf, mean, sigma, df, dependent.ind, given.ind, X.given, check.sigma = TRUE, algorithm = GenzBretz(), ...)
+pcmvt(lower = -Inf, upper = Inf, mean, sigma, df, dependent.ind, given.ind, X.given,
+check.sigma = TRUE, algorithm = GenzBretz(), ...)
 }
 \arguments{
   \item{lower}{
@@ -49,11 +49,23 @@ This program involves the computation of multivariate t probabilities with arbit
 }
 \value{
 The evaluated distribution function is returned with attributes
-\item{error}{estimated absolute error and}
-\item{msg }{Normal Completion}
 
-\seealso{\code{\link{dcmvt}()},\code{\link{rcmvt}()},\code{\link{pmvt}()}
-        }
+ \item{error}{estimated absolute error and}
+  \item{msg }{Normal Completion}
+}
+
+\references{
+Genz, A. and Bretz, F. (1999), Numerical computation of multivariate t-probabilities with application to power calculation of multiple contrasts. Journal of Statistical Computation and Simulation, 63, 361–378.
+
+Genz, A. and Bretz, F. (2002), Methods for the computation of multivariate t-probabilities. Journal of Computational and Graphical Statistics, 11, 950–971.
+
+Genz, A. (2004), Numerical computation of rectangular bivariate and trivariate normal and t-probabilities, Statistics and Computing, 14, 251–260.
+
+Genz, A. and Bretz, F. (2009), Computation of Multivariate Normal and t Probabilities. Lecture Notes in Statistics, Vol. 195. Springer-Verlag, Heidelberg.
+}
+
+\seealso{\code{\link{dcmvt}()},\code{\link{rcmvt}()},\code{\link{pmvt}()}}
+
 \examples{
 n <- 10
 df=3
@@ -62,6 +74,7 @@ A <- tcrossprod(A,A) #A %*% t(A)
 
 pcmvt(lower=-Inf, upper=1, mean=rep(1,n), sigma=A, df=df,	dependent.ind=3, given.ind=c(1,4,7,9,10),
       X.given=c(1,1,0,0,-1))
+
 
 pcmvt(lower=-Inf, upper=c(1,2), mean=rep(1,n),
       sigma=A,df=df, dep=c(2,5), given=c(1,4,7,9,10),
