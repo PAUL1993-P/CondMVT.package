@@ -1,6 +1,5 @@
 \name{SMCEM_onestep}
 \alias{SMCEM_onestep}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Data Imputation Using SEM and MCEM (Single Iteration, Degrees of Freedom Known)
 }
@@ -10,38 +9,12 @@ This sub-package contains the subroutines for iterative imputation of missing va
 \usage{
 SMCEM_onestep(Y,mu,Sigma,df,nob)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
  \item{Y}{the multivariate t dataset}
   \item{mu}{	the location vector, which must be specified. In cases where it is unknown, starting values are provided.}
   \item{Sigma}{scatter matrix, which must be specified. In cases where it is unknown, starting values are provided.}
   \item{df}{degrees of freedom, which must be specified.}
   \item{nob}{number of draws in the E-step}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # 3-dimensional multivariate t distribution
@@ -80,7 +53,3 @@ MCEM1$Y2     #Newly completed Dataset (with imputed values)
 MCEM1$mu	   #updated location vector
 MCEM1$Sigma  #updated scatter matrix
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
