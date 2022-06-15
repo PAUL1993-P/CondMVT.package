@@ -1,5 +1,4 @@
 \name{EM_Uonestep}
-\alias{EM_Uonestep}
 \title{
 Data Imputation Using EM (Single Iteration, Degrees of Freedom Unknown)
 }
