@@ -1,5 +1,4 @@
 \name{EM_msteps}
-\alias{EM_msteps}
 \title{Data Imputation Using EM (Multiple Iterations; Degrees of Freedom Known)
 }
 \description{
