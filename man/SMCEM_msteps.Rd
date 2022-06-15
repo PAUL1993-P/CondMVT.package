@@ -67,9 +67,12 @@ for (l in 101:1000){
   T_Sigma = T_Sigma + SEM$SigmaChain[,,l]
   T_Data= T_Data+ SEM$YChain[,,l]
 }
-round((T_mu/900),4) #updated location vector
-round((T_Sigma/900),4)#updated scatter matrix
-T_Data1=  T_Data/900	#complete dataset as an average of (K-100) complete datasets for the various iterations.
+#updated location vector
+round((T_mu/900),4) 
+#updated scatter matrix  
+round((T_Sigma/900),4)
+#complete dataset as an average of (K-100) complete datasets for the various iterations.  
+T_Data1=  T_Data/900	
 
 #Multiple Iterations (MCEM)
 MCEM=SMCEM_msteps(Y=Y8,mu=mu_stat,Sigma=Sigma_stat,df=df,nob=100,
@@ -84,9 +87,12 @@ for (l in 101:1000){
   T_Sigma = T_Sigma + MCEM$SigmaChain[,,l]
   T_Data= T_Data+ MCEM$YChain[,,l]
 }
-round((T_mu/900),4) #updated location vector
-round((T_Sigma/900),4) #updated scatter matrix
-T_Data1= T_Data/900 #complete dataset as an average of (K-100)
-                    #complete datasets for the various iterations.
+#updated location vector
+round((T_mu/900),4) 
+#updated scatter matrix
+round((T_Sigma/900),4) 
+#complete dataset as an average of (K-100) complete datasets for the various iterations.
+T_Data1= T_Data/900 
+                    
 
 }
