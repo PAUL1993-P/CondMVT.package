@@ -9,7 +9,6 @@ This sub-package provides subroutines for implementation of SEM and MCEM techniq
 SMCEM_Uonestep(Y,mu,Sigma,df,nob,e)
 SMCEM_Umsteps(Y,mu,Sigma,df,nob,K,e)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{Y}{the multivariate t dataset}
   \item{mu}{	the location vector, which must be specified. In cases where it is unknown, starting values are provided.}
@@ -61,10 +60,14 @@ for (l in 101:1000){
   T_Sigma = T_Sigma + SEMU$SigmaChain[,,l]
   T_Data= T_Data+ SEMU$YChain[,,l]
 }
-round((T_mu/900),4)    #updated location vector
-round((T_Sigma/900),4)       #updated scatter matrix
-udfs=mean(SEMU$dfchain[101:1000])	#updated degrees of freedom
-T_Data1=  T_Data/900	#complete dataset as an average of (K-100) complete datasets for the various iterations.
+#updated location vector
+round((T_mu/900),4) 
+#updated scatter matrix 
+round((T_Sigma/900),4)
+#updated degrees of freedom 
+udfs=mean(SEMU$dfchain[101:1000])
+#complete dataset as an average of (K-100) complete datasets for the various iterations.
+T_Data1=  T_Data/900	
 
 #Multiple Iterations (MCEM)
 MCEMU=SMCEM_Umsteps(Y=Y8,mu=mu_stat,Sigma=Sigma_stat,df=df_stat,nob=1000,K=1000,e=0.00001)
@@ -79,9 +82,13 @@ for (l in 101:1000){
   T_Sigma = T_Sigma + MCEMU$SigmaChain[,,l]
   T_Data= T_Data+ MCEMU$YChain[,,l]
 }
-round((T_mu/900),4)    #updated location vector
-round((T_Sigma/900),4)       #updated scatter matrix
-udf=mean(MCEMU$dfchain[101:1000])	#updated degrees of freedom
-T_Data1=  T_Data/900	#complete dataset as an average of (K-100) complete datasets for the various iterations.
+#updated location vector
+round((T_mu/900),4)
+#updated scatter matrix 
+round((T_Sigma/900),4)
+#updated degrees of freedom  
+udf=mean(MCEMU$dfchain[101:1000])	
+#complete dataset as an average of (K-100) complete datasets for the various iterations.  
+T_Data1=  T_Data/900
 
 }
