@@ -7,9 +7,9 @@ These functions provide the density function and a random number generator for t
 \usage{
 dcmvt(x, mean, sigma,df, dependent.ind, given.ind,
 	X.given, check.sigma=TRUE, log = FALSE)
-rcmvt(n, mean, sigma,df,dependent.ind, given.ind,
-	X.given, check.sigma=TRUE,
-	method=c("eigen", "svd", "chol"))
+rcmvt=function (n, mean, sigma, df,dependent.ind, given.ind, X.given,
+                check.sigma = TRUE,type = c("shifted", "Kshirsagar"),
+		method = c("eigen", "svd", "chol"))
 }
 \arguments{
 \item{x}{vector or matrix of quantiles of Y. If x is a matrix, each row is taken to be a quantile.}
