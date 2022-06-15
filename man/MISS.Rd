@@ -1,6 +1,4 @@
 \name{MISS}
-\alias{MISS}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{Creating Missing Values at Random in Multivariate Datasets
 
 }
