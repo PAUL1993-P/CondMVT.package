@@ -1,5 +1,4 @@
 \name{SMCEM_Uonestep}
-\alias{SMCEM_Uonestep}
 \title{
 Data Imputation Using SEM and MCEM (Single Iteration; Degrees of Freedom Unknown)
 }
