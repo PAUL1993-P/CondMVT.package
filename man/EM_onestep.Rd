@@ -1,5 +1,4 @@
 \name{EM_onestep}
-\alias{EM_onestep}
 \title{
 Data Imputation Using EM (Single Iteration; Degrees of Freedom Known)
 }
@@ -9,7 +8,6 @@ The sub-package contains subroutines for imputation of missing values as well as
 \usage{
 EM_onestep(Y,mu,Sigma,df)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
    \item{Y}{the multivariate t dataset}
   \item{mu}{the location vector, which must be specified. In cases where it is unknown, starting values are provided.}
