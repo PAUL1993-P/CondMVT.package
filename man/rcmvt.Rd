@@ -1,5 +1,4 @@
 \name{rcmvt}
-\alias{rcmvt}
 \title{Conditional Multivariate t Density and Random Deviates
 }
 \description{
