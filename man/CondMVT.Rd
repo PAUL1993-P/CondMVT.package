@@ -1,6 +1,5 @@
 
 \name{CondMVT}
-\alias{CondMVT}
 \title{Conditional Location Vector, Scatter Matrix, and Degrees of Freedom of Multivariate t Distribution}
 \usage{
 CondMVT(mean, sigma, df, dependent.ind, given.ind, X.given,
