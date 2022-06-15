@@ -1,5 +1,4 @@
 \name{EM_Umsteps}
-\alias{EM_Umsteps}
 \title{
 Data Imputation Using EM (Multiple Iterations, Degrees of Freedom Unknown)
 }
