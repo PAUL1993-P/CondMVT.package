@@ -48,7 +48,7 @@ SEM1$mu	   #updated location vector
 SEM1$Sigma #updated scatter matrix
 
 #Results for Newly Completed Dataset (MCEM)
-MCEM1$Y2     #Newly completed Dataset (with imputed values)
+MCEM1$Y2    #Newly completed Dataset (with imputed values)
 MCEM1$mu	   #updated location vector
-MCEM1$Sigma  #updated scatter matrix
+MCEM1$Sigma #updated scatter matrix
 }
