@@ -1,5 +1,4 @@
 \name{dcmvt}
-\alias{dcmvt}
 \title{Conditional Multivariate t Density and Random Deviates
 }
 \description{These functions provide the density function and a random number generator for the conditional multivariate t distribution, [Y given X], where Z = (X,Y) is the fully-joint multivariate t distribution with location vector (or mode) equal to mean and covariance matrix sigma.}
