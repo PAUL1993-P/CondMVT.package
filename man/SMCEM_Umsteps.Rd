@@ -1,4 +1,5 @@
 \name{SMCEM_Umsteps}
+\alias{SMCEM_Umsteps}
 \title{Data Imputation Using SEM and MCEM (Multiple Iterations; Degrees of Freedom Unknown)
 
 }
