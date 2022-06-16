@@ -1,4 +1,5 @@
 \name{pcmvt}
+\alias{pcmvt}
 \title{Conditional Multivariate t Distribution
 }
 \description{Computes the distribution function of the conditional multivariate t, [Y given X], where Z = (X,Y) is the fully-joint multivariate t distribution with mean equal to location vector, df equal to degrees of freedom and scatter matrix sigma. Computations are based on algorithms by Genz and Bretz.
