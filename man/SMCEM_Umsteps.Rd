@@ -6,9 +6,7 @@
 \description{
 This sub-package provides subroutines for implementation of SEM and MCEM techniques in imputing missing values as well as estimating multivariate t parameters when the degrees of freedom are unknown.The functions SMCEM_msteps constitute the SEM and MCEM algorithms for multiple-iterative data imputation and parameter estimation for multivariate t data with unknown degrees of freedom. The functions represent SEM when the number of draws in the E-step (denoted by nob) is 1 and MCEM when we have more than one draw in the E-step.More details on the implementation of SEM and MCEM techniques can be found in Kinyanjui et al. (2020).
 }
-\usage{
-SMCEM_Uonestep(Y,mu,Sigma,df,nob,e)
-SMCEM_Umsteps(Y,mu,Sigma,df,nob,K,e)
+\usage{SMCEM_Umsteps(Y,mu,Sigma,df,nob,K,e)
 }
 \arguments{
   \item{Y}{the multivariate t dataset}
