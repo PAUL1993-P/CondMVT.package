@@ -1,12 +1,11 @@
 \name{EM_msteps}
+\alias{EM_msteps}
 \title{Data Imputation Using EM (Multiple Iterations; Degrees of Freedom Known)
 }
 \description{
 The sub-package contains subroutines for imputation of missing values as well as parameter estimation (for the location vector and the scatter matrix) in multivariate t distribution using the Expectation Maximization (EM) algorithm when the degrees of freedom are known. EM algorithm iteratively imputes the missing values and computes the estimates for the multivariate t parameters in two steps (E-step and M-step) as explained in Kinyanjui et al. (2021). For a single iteration, the function EM_onestep is run. For multiple iterations, the function EM_msteps is run. The function LIKE (specifying the likelihood) facilitates the setting of tolerance level for convergence of the algorithm (that is L(θ^(t+1))-L(θ^(t))≤δ, where δ is a set tolerance level and t denotes the number of iterations).
 }
-\usage{
-EM_onestep(Y,mu,Sigma,df)
-EM_msteps(Y,mu,Sigma,df,K,error)
+\usage{EM_msteps(Y,mu,Sigma,df,K,error)
 }
 \arguments{
     \item{Y}{the multivariate t dataset}
