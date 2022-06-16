@@ -1,3 +1,4 @@
+#'@importFrom stats mvtnorm mahalanobis rgamma
 SMCEM_Uonestep=function(Y,mu,Sigma,df,nob,e){
   fun1=function(df,Weight,p){
     SS1=0
