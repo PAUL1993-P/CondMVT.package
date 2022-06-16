@@ -6,7 +6,8 @@
 This function provides the random number generator for the conditional multivariate t distribution, [Y given X], where Z = (X,Y) is the fully-joint multivariate t distribution with location vector equal to mean and scatter matrix sigma.
 }
 \usage{rcmvt=function (n, mean, sigma, df,dependent.ind, given.ind, X.given,
-check.sigma = TRUE,type = c("shifted", "Kshirsagar"), method = c("eigen", "svd", "chol"))
+check.sigma = TRUE,type = c("shifted", "Kshirsagar"), 
+method = c("eigen", "svd", "chol"),...)
 }
 \arguments{
 \item{n}{number of random deviates.}
@@ -23,6 +24,7 @@ check.sigma = TRUE,type = c("shifted", "Kshirsagar"), method = c("eigen", "svd",
    multivariate t-distribution appears for example as the Bayesian posterior distribution for the regression coefficients in a linear regression. In the central case both types coincide.} 
 \item{method}{string specifying the matrix decomposition used to determine the matrix root of sigma. Possible methods are eigenvalue decomposition ("eigen", default), 
 singular value decomposition ("svd"), and Cholesky decomposition ("chol"). The Cholesky is typically fastest, not by much though.}
+\item{...}{additional arguments to rcmvt(), for example type and method.}           
 }
 \examples{
 # 10-dimensional multivariate t distribution
