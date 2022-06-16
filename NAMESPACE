@@ -1,2 +1,2 @@
 exportPattern("^[[:alpha:]]+")
-importFrom("stats", "mahalanobis", "rgamma")
+importFrom("stats", "mvtnorm", "mahalanobis", "rgamma")
