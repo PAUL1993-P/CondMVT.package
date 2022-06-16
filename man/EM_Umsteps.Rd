@@ -1,17 +1,15 @@
 \name{EM_Umsteps}
+\alias{EM_Umsteps}
 \title{
 Data Imputation Using EM (Multiple Iterations, Degrees of Freedom Unknown)
 }
 \description{
 This sub-package constitutes the subroutines for EM algorithm (for multiple iterations). It has 2 functions namely LIKE and EM_Umsteps.  The function EM_Umsteps carries out missing data imputation as well as parameter estimation in multivariate t distribution in multiple iterations; assuming that the degrees of freedom are unknown. In addition to updating the location vector and the scatter matrix, therefore, the function also finds an estimate for the degrees of freedom. The bisection method is employed in the algorithm to iteratively update the degrees of freedom.The function LIKE (specifying the likelihood) facilitates the setting of tolerance level for convergence of the EM algorithm (that is L(θ^(t+1))-L(θ^(t))≤δ, where δ is a set tolerance level and t denotes the number of iterations).Details of how EM works in light of unknown degrees of freedom can be found in Kinyanjui et al. (2020) and Liu and Rubin (1995).
 }
-\usage{
-EM_Uonestep(Y,mu,Sigma,df,e)
-EM_Umsteps(Y,mu,Sigma,df,K,e,error)
-
+\usage{EM_Umsteps(Y,mu,Sigma,df,K,e,error)
 }
 \arguments{
-    \item{Y}{the multivariate t dataset}
+   \item{Y}{the multivariate t dataset}
   \item{mu}{	the location vector, which must be specified. In cases where it is unknown, starting values are provided.}
   \item{Sigma}{Scatter matrix, which must be specified. In cases where it is unknown, starting values are provided.}
   \item{df}{degrees of freedom, which must be specified.}
