@@ -1,4 +1,5 @@
 \name{MISS}
+\alias{MISS}
 \title{Creating Missing Values at Random in Multivariate Datasets
 
 }
