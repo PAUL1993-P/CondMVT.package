@@ -1,7 +1,7 @@
 dcmvt=function (x, mean, sigma,df, dependent.ind, given.ind, X.given,
                 check.sigma = TRUE, log = FALSE)
 {
-  library(mvtnorm)
+ #library(mvtnorm)
   if (missing(dependent.ind))
     return("You must specify the indices of dependent random variables in `dependent.ind'")
   if (length(x) != length(dependent.ind))
