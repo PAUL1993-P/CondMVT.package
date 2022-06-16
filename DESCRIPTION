@@ -8,4 +8,4 @@ Description: The packages helps sample from the conditional multivariate t distr
 License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.1.0
-Imports:stats, mvtnorm, mahalanobis, rgamma
+Imports:stats, mvtnorm, base
