@@ -1,6 +1,6 @@
 \name{EM_onestep}
-\title{
-Data Imputation Using EM (Single Iteration; Degrees of Freedom Known)
+\alias{EM_onestep}
+\title{Data Imputation Using EM (Single Iteration; Degrees of Freedom Known)
 }
 \description{
 The sub-package contains subroutines for imputation of missing values as well as parameter estimation (for the location vector and the scatter matrix) in multivariate t distribution using the Expectation Maximization (EM) algorithm when the degrees of freedom are known. EM algorithm imputes the missing values and computes the estimates for the multivariate t parameters in two steps (E-step and M-step) as explained in Kinyanjui et al. (2021). For a single iteration, the function EM_onestep is run.
