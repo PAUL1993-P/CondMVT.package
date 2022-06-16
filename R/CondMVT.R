@@ -1,7 +1,7 @@
 
 CondMVT=function (mean, sigma, df, dependent.ind, given.ind, X.given, check.sigma = TRUE)
 {
-  library(mvtnorm)
+  #library(mvtnorm)
   if (missing(dependent.ind))
     return("You must specify the indices of dependent random variables in `dependent.ind'")
   if (missing(given.ind) & missing(X.given))
