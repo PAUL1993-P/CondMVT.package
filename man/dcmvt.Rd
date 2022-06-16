@@ -28,7 +28,9 @@ rcmvt=function (n, mean, sigma, df,dependent.ind, given.ind, X.given,
 string specifying the matrix decomposition used to determine the matrix root of sigma. Possible methods are eigenvalue decomposition ("eigen", default), singular value decomposition ("svd"), and Cholesky decomposition ("chol"). The Cholesky is typically fastest, not by much though.}
 
 }
+\references{Genz, A. and Bretz, F. (2009), Computation of Multivariate Normal and t Probabilities. Lecture Notes in Statistics, Vol. 195. Springer-Verlag, Heidelberg.
 
+S. Kotz and S. Nadarajah (2004), Multivariate t Distributions and Their Applications. Cambridge University Press. Cambridge.}
 \examples{
 # 10-dimensional multivariate t distribution
 n <- 10
