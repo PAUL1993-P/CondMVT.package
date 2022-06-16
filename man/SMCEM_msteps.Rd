@@ -1,14 +1,12 @@
 \name{SMCEM_msteps}
+\alias{SMCEM_msteps}
 \title{Data Imputation Using SEM and MCEM (Multiple Iterations, Degrees of Freedom Known)
 
 }
 \description{
 This sub-package contains the subroutines for iterative imputation of missing values as well as parameter estimation (for the location vector and the scatter matrix) in multivariate t distribution using Stochastic EM (SEM) and Monte Carlo EM (MCEM). In this case, the degrees of freedom for the distribution are known or fixed a priori. SEM is implemented when the analyst specifies a single draw in the E-step. In case we have multiple draws in the E-step, the algorithm changes to MCEM. In both algorithms, the function SMCEM_onestep is run when we are only interested in the imputed values and the parameter updates in a single iteration. The function SMCEM_msteps is run when we are interested in multiple iterations (this is usually the case). Essentially, the first iterations (for instance, 10 percent of all iterations) is usually burnt-in in order to ward off the effects of initial values. Details of how SEM and MCEM operate can be found in among others Kinyanjui et al. (2021), Nielsen (2000), Levine and Casella (2001) Jank (2005) and Karimi et al. (2019).
 }
-\usage{
-SMCEM_onestep(Y,mu,Sigma,df,nob)
-SMCEM_msteps(Y,mu,Sigma,df, nob,K)
-
+\usage{SMCEM_msteps(Y,mu,Sigma,df, nob,K)
 }
 \arguments{
   \item{Y}{the multivariate t dataset}
