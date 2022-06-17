@@ -63,9 +63,6 @@ Genz, A. (2004), Numerical computation of rectangular bivariate and trivariate n
 
 Genz, A. and Bretz, F. (2009), Computation of Multivariate Normal and t Probabilities. Lecture Notes in Statistics, Vol. 195. Springer-Verlag, Heidelberg.
 }
-\source{
-\url{http://www.sci.wsu.edu/math/faculty/genz/homepage}
-}
 \seealso{\code{\link{dcmvt}()},\code{\link{rcmvt}()},\code{\link{pmvt}()},\code{\link{GenzBretz}()}}
 
 \examples{
