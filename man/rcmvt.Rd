@@ -6,7 +6,7 @@
 This function provides the random number generator for the conditional multivariate t distribution, [Y given X], where Z = (X,Y) is the fully-joint multivariate t distribution with location vector equal to mean and scatter matrix sigma.
 }
 \usage{rcmvt=function (n, mean, sigma, df,dependent.ind, given.ind, X.given,
-check.sigma = TRUE,type = c("shifted", "Kshirsagar"), 
+check.sigma = TRUE,type = c("Kshirsagar", "shifted"), 
 method = c("eigen", "svd", "chol"),...)
 }
 \arguments{
