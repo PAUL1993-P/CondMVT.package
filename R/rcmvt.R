@@ -1,5 +1,5 @@
 rcmvt=function (n, mean, sigma, df,dependent.ind, given.ind, X.given,
-                check.sigma = TRUE,type = c("shifted", "Kshirsagar") ,method = c("eigen", "svd", "chol"))
+                check.sigma = TRUE,type = c("Kshirsagar", "shifted") ,method = c("eigen", "svd", "chol"))
 {
   #library(mvtnorm)
   if (missing(dependent.ind))
