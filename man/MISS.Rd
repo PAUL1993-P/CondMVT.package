@@ -4,7 +4,7 @@
 
 }
 \description{
-This function randomly creates missing values in a multivariate dataset. The resultant missing data mechanism is missing at random (MAR). The percentage of missingness has to be specified. This percentage is computed as a proportion of the sample size. In addition, the function allows for more than one missing value in any given case. It is set such that in a \eqn{p}-variate dataset, for any \deqn{i^{th}} case, the maximum allowable number of missing values is \eqn{p-1}. This helps avoid a situation where a case has no observed value.
+This function randomly creates missing values in a multivariate dataset. The resultant missing data mechanism is missing at random (MAR). The percentage of missingness has to be specified. This percentage is computed as a proportion of the sample size. In addition, the function allows for more than one missing value in any given case. It is set such that in a \eqn{p}-variate dataset, for any \eqn{i^{th}} case, the maximum allowable number of missing values is \eqn{p-1}. This helps avoid a situation where a case has no observed value.
 }
 \usage{
 MISS (TT, Percent)
