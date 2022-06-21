@@ -53,43 +53,42 @@ SEM1=SMCEM_onestep(Y=Y8,mu= mu_stat,Sigma=Sigma_stat,df=df,nob=1)
 MCEM1=SMCEM_onestep(Y=Y8,mu= mu_stat,Sigma=Sigma_stat,df=df,nob=100)
 
 #Multiple Iterations (SEM)
-SEM=SMCEM_msteps(Y=Y8,mu= mu_stat,Sigma= Sigma_stat,df=df,nob=1,K=1000)
+SEM=SMCEM_msteps(Y=Y8,mu= mu_stat,Sigma= Sigma_stat,df=df,nob=1,K=500)
 
-#Results for Newly Completed Dataset (Burning in first 100 iterations in SEM)
+#Results for Newly Completed Dataset (Burning in first 50 iterations in SEM)
 T_mu=rep(0,3)
 T_Sigma=matrix(rep(0,3*3),nrow=3)
 T_Data=matrix(rep(0,3*10), nrow =10)
-for (l in 101:1000){
+for (l in 51:500){
   T_mu = T_mu + SEM$muchain[l,]
   T_Sigma = T_Sigma + SEM$SigmaChain[,,l]
   T_Data= T_Data+ SEM$YChain[,,l]
 }
 #updated location vector
-round((T_mu/900),4) 
+round((T_mu/450),4) 
 #updated scatter matrix  
-round((T_Sigma/900),4)
-#complete dataset as an average of (K-100) complete datasets for the various iterations.  
-T_Data1=  T_Data/900	
+round((T_Sigma/450),4)
+#complete dataset as an average of (K-50) complete datasets for the various iterations.  
+T_Data1=  T_Data/450	
 
 #Multiple Iterations (MCEM)
 MCEM=SMCEM_msteps(Y=Y8,mu=mu_stat,Sigma=Sigma_stat,df=df,nob=100,
-K=1000)
+K=500)
 
-#Results for Newly Completed Dataset (Burning in first 100 iterations in MCEM)
+#Results for Newly Completed Dataset (Burning in first 50 iterations in MCEM)
 T_mu=rep(0,3)
 T_Sigma=matrix(rep(0,3*3),nrow=3)
 T_Data=matrix(rep(0,3*10), nrow =10)
-for (l in 101:1000){
+for (l in 51:500){
   T_mu = T_mu + MCEM$muchain[l,]
   T_Sigma = T_Sigma + MCEM$SigmaChain[,,l]
   T_Data= T_Data+ MCEM$YChain[,,l]
 }
 #updated location vector
-round((T_mu/900),4) 
+round((T_mu/450),4) 
 #updated scatter matrix
-round((T_Sigma/900),4) 
-#complete dataset as an average of (K-100) complete datasets for the various iterations.
-T_Data1= T_Data/900 
-                    
-
+round((T_Sigma/450),4) 
+#complete dataset as an average of (K-50) complete datasets for the various iterations.
+T_Data1= T_Data/450 
+                   
 }
