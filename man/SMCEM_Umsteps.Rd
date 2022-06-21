@@ -41,53 +41,59 @@ df_stat=6
 #Imputing Missing Values and Updating Parameter Estimates
 
 #Single Iteration (SEM)
-SEMU1=SMCEM_Uonestep(Y=Y8,mu=mu,Sigma=Sigma_stat,df= df_stat,nob=1,e=0.00001)
+SEMU1=SMCEM_Uonestep(Y=Y8,mu=mu,Sigma=Sigma_stat,df= df_stat,nob=1,e=0.0001)
 
 #Single Iteration (MCEM)
-MCEMU1=SMCEM_Uonestep(Y=Y8,mu=mu,Sigma=Sigma_stat,df= df_stat,nob=1000,e=0.00001)
+MCEMU1=SMCEM_Uonestep(Y=Y8,mu=mu,Sigma=Sigma_stat,df= df_stat,nob=50,e=0.0001)
 
 #Multiple Iterations (SEM)
-SEMU=SMCEM_Umsteps(Y=Y8,mu=mu_stat,Sigma=Sigma_stat,df=df_stat,nob=1,K=1000,e=0.00001)
+SEMU=SMCEM_Umsteps(Y=Y8,mu=mu_stat,Sigma=Sigma_stat,df=df_stat,nob=1,K=100,e=0.0001)
 
-#Results for Newly Completed Dataset (Burning in first 100 iterations in SEM)
+#Results for Newly Completed Dataset (Burning in first 10 iterations in SEM)
 T_mu=rep(0,3)
 T_Sigma=matrix(rep(0,3*3),nrow=3)
 T_Data=matrix(rep(0,3*25), nrow =25)
 T_df=rep()
-for (l in 101:1000){
-  T_mu = T_mu + SEMU$muchain[l,]
+for (l in 11:100){
+ T_mu = T_mu + SEMU$muchain[l,]
   T_Sigma = T_Sigma + SEMU$SigmaChain[,,l]
-  T_Data= T_Data+ SEMU$YChain[,,l]
+ T_Data= T_Data+ SEMU$YChain[,,l]
 }
 #updated location vector
-round((T_mu/900),4) 
+round((T_mu/90),4)
+
 #updated scatter matrix 
-round((T_Sigma/900),4)
+round((T_Sigma/90),4)
+
 #updated degrees of freedom 
-udfs=mean(SEMU$dfchain[101:1000])
-#complete dataset as an average of (K-100) complete datasets for the various iterations.
-T_Data1=  T_Data/900	
+udfs=mean(SEMU$dfchain[11:100])
+
+#complete dataset as an average of (K-10) complete datasets for the various iterations.
+T_Data1=  T_Data/90	
 
 #Multiple Iterations (MCEM)
-MCEMU=SMCEM_Umsteps(Y=Y8,mu=mu_stat,Sigma=Sigma_stat,df=df_stat,nob=1000,K=1000,e=0.00001)
+MCEMU=SMCEM_Umsteps(Y=Y8,mu=mu_stat,Sigma=Sigma_stat,df=df_stat,nob=50,K=100,e=0.0001)
 
-#Results for Newly Completed Dataset (Burning in first 100 iterations in MCEM)
+#Results for Newly Completed Dataset (Burning in first 10 iterations in MCEM)
 T_mu=rep(0,3)
 T_Sigma=matrix(rep(0,3*3),nrow=3)
 T_Data=matrix(rep(0,3*25), nrow =25)
 T_df=rep()
-for (l in 101:1000){
+for (l in 11:100){
   T_mu = T_mu + MCEMU$muchain[l,]
   T_Sigma = T_Sigma + MCEMU$SigmaChain[,,l]
   T_Data= T_Data+ MCEMU$YChain[,,l]
 }
 #updated location vector
-round((T_mu/900),4)
+round((T_mu/90),4)
+
 #updated scatter matrix 
-round((T_Sigma/900),4)
+round((T_Sigma/90),4)
+
 #updated degrees of freedom  
-udf=mean(MCEMU$dfchain[101:1000])	
-#complete dataset as an average of (K-100) complete datasets for the various iterations.  
-T_Data1=  T_Data/900
+udf=mean(MCEMU$dfchain[11:100])
+
+#complete dataset as an average of (K-10) complete datasets for the various iterations.  
+T_Data1=  T_Data/90
 
 }
