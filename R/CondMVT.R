@@ -28,6 +28,6 @@ CondMVT=function (mean, sigma, df, dependent.ind, given.ind, X.given, check.sigm
   cMu <- c(mean[dependent.ind] + CDinv %*% (X.given - mean[given.ind]))
   CIJK=(B - CDinv %*% t(C))
   cVar <- R*CIJK
-  return(list(condMean = cMu,CIJK=CIJK ,condVar = cVar,cond_df=c_df,phi=solve(D),R=R))
+  return(list(condMean = cMu,condVar = cVar,cond_df=c_df))
 }
 
