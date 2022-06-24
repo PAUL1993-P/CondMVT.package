@@ -13,7 +13,7 @@ MISS (TT, Percent)
   \item{TT}{n×p complete dataset.}
   \item{Percent}{the proportion of missing values, which must be specified.}
   }
-\value{Data \code{Y} of size \code{n*p}  with missing values (\code{NA's}) created at random. The missing values are logical in nature. 
+\value{Data \code{Y} of size \code{n×p}  with missing values (\code{NA's}) created at random. The missing values are logical in nature. 
 }
 \examples{
 # 3-dimensional multivariate t distribution
