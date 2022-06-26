@@ -16,6 +16,9 @@ This sub-package contains the subroutines for iterative imputation of missing va
   \item{nob}{number of draws in the E-step}
   \item{K}{the number of iterations, which must be specified.}
 }
+\value{
+ Completed dataset, updated location vector, and scatter matrix when employing the SEM and MCEM algorithms. All outputs are numeric. 
+ }
 \references{
 Karimi, B., Lavielle, M., and Moulines, É. (2019). On the Convergence Properties of the Mini-Batch EM and MCEM Algorithms.
 
@@ -40,6 +43,7 @@ TT=Y7 #Complete Dataset
 
 #Introduce MAR Data
 Y8= MISS(TT,20) #The newly created incomplete dataset.
+Y8
 
 #Initializing Values
 mu_stat=c(0.5,1,2)
@@ -70,6 +74,7 @@ round((T_mu/450),4)
 round((T_Sigma/450),4)
 #complete dataset as an average of (K-50) complete datasets for the various iterations.  
 T_Data1=  T_Data/450	
+T_Data1
 
 #Multiple Iterations (MCEM)
 MCEM=SMCEM_msteps(Y=Y8,mu=mu_stat,Sigma=Sigma_stat,df=df,nob=100,
@@ -90,5 +95,6 @@ round((T_mu/450),4)
 round((T_Sigma/450),4) 
 #complete dataset as an average of (K-50) complete datasets for the various iterations.
 T_Data1= T_Data/450 
-                   
+T_Data1                    
+
 }
