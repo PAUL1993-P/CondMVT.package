@@ -1,7 +1,6 @@
 \name{EM_Umsteps}
 \alias{EM_Umsteps}
-\title{
-Data Imputation Using EM (Multiple Iterations, Degrees of Freedom Unknown)
+\title{Data Imputation Using EM (Multiple Iterations, Degrees of Freedom Unknown)
 }
 \description{
 This sub-package constitutes the subroutines for EM algorithm (for multiple iterations). It has 2 functions namely \code{LIKE} and \code{EM_Umsteps}.  The function \code{EM_Umsteps} carries out missing data imputation as well as parameter estimation in multivariate t distribution in multiple iterations; assuming that the degrees of freedom are unknown. In addition to updating the location vector and the scatter matrix, therefore, the function also finds an estimate for the degrees of freedom. The bisection method is employed in the algorithm to iteratively update the degrees of freedom.The function \code{LIKE} (specifying the likelihood) facilitates the setting of tolerance level for convergence of the EM algorithm (that is \eqn{L(\theta^{t+1})-L(\theta^{t})\leq{\delta}}, where \eqn{\delta} is a set tolerance level and t denotes the number of iterations).Details of how EM works in light of unknown degrees of freedom can be found in Kinyanjui et al. (2020) and Liu and Rubin (1995).
@@ -9,7 +8,7 @@ This sub-package constitutes the subroutines for EM algorithm (for multiple iter
 \usage{EM_Umsteps(Y,mu,Sigma,df,K,e,error)
 }
 \arguments{
-   \item{Y}{the multivariate t dataset}
+    \item{Y}{the multivariate t dataset}
   \item{mu}{	the location vector, which must be specified. In cases where it is unknown, starting values are provided.}
   \item{Sigma}{Scatter matrix, which must be specified. In cases where it is unknown, starting values are provided.}
   \item{df}{degrees of freedom, which must be specified.}
@@ -18,6 +17,9 @@ This sub-package constitutes the subroutines for EM algorithm (for multiple iter
   \item{K}{the number of iterations, which must be specified.}
 
 }
+\value{
+ Completed dataset, updated location vector,scatter matrix, and degrees of freedom. All outputs are numeric. 
+ }
 \references{
 Kinyanjui, P. K., Tamba, C. L., Orawo, L. A. O., & Okenye, J. O. (2020). Missing data imputation in multivariate t distribution with unknown degrees of freedom using expectation maximization algorithm and its stochastic variants. Model Assisted Statistics and Applications, 15(3), 263-272.
 
@@ -37,6 +39,7 @@ TT=Y7 #Complete Dataset
 
 #Introduce MAR Data
 Y8= MISS(TT,20) #The newly created incomplete dataset.
+Y8
 
 #Initializing Values
 mu_stat=c(0.5,1,2)
@@ -58,3 +61,4 @@ EMU$df	    #Updated degrees of freedom.
 EMU$K1	#number of iterations the algorithm takes to converge
 
 }
+
