@@ -1,7 +1,6 @@
 \name{SMCEM_Uonestep}
 \alias{SMCEM_Uonestep}
-\title{
-Data Imputation Using SEM and MCEM (Single Iteration; Degrees of Freedom Unknown)
+\title{Data Imputation Using SEM and MCEM (Single Iteration; Degrees of Freedom Unknown)
 }
 \description{
 This sub-package provides subroutines for implementation of SEM and MCEM techniques in imputing missing values as well as estimating multivariate t parameters when the degrees of freedom are unknown. It has 4 functions namely fun1, dfun1, Bisec, and SMCEM_Uonestep. The functions fun1 and dfun1 in the sub-package constitute the equation for the degrees of freedom and its derivative respectively. The Bisec function contains the bisection method subroutines to facilitate the iterative estimation of the degrees of freedom using fun1 and dfun1. The function SMCEM_Uonestep constitute the SEM and MCEM algorithms for single-iteration data imputation and parameter estimation for multivariate t data with unknown degrees of freedom. The functions represent SEM when the number of draws in the E-step (denoted by nob) is 1 and MCEM when we have more than one draw in the E-step.Details of how SEM and MCEM impute missing values and estimate parameters in multivariate t context (unknown degrees of freedom) are explained by Kinyanjui et al. (2020).
@@ -17,6 +16,9 @@ SMCEM_Uonestep(Y,mu,Sigma,df,nob,e)
   \item{nob}{number of draws in the E-step}
   \item{e}{tolerance level for convergence of the bisection method for estimation of df. }
 }
+\value{
+ Completed dataset, updated location vector,scatter matrix, and degrees of freedom when employing the SEM and MCEM algorithms. All outputs are numeric. 
+ }
 \references{
 Kinyanjui, P. K., Tamba, C. L., Orawo, L. A. O., & Okenye, J. O. (2020). Missing data imputation in multivariate t distribution with unknown degrees of freedom using expectation maximization algorithm and its stochastic variants. Model Assisted Statistics and Applications, 15(3), 263-272.
 }
@@ -33,6 +35,8 @@ TT=Y7 #Complete Dataset
 
 #Introduce MAR Data
 Y8= MISS(TT,20) #The newly created incomplete dataset.
+Y8
+
 #Initializing Values
 mu_stat=c(0.5,1,2)
 Sigma_stat=matrix(c(0.33,0.31,0.3,0.31,0.335,0.295,0.3,0.295,0.32),3,3)
@@ -55,4 +59,5 @@ SEMU1$Sigma  #updated scatter matrix
 MCEMU1$Y2     #Newly completed Dataset (with imputed values)
 MCEMU1$mu	    #updated location vector
 MCEMU1$Sigma  #updated scatter matrix
+MCEMU1$df     #updated degrees of freedom
 }
