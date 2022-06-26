@@ -17,6 +17,9 @@ This sub-package provides subroutines for implementation of SEM and MCEM techniq
   \item{K}{the number of iterations, which must be specified.}
   \item{e}{tolerance level for convergence of the bisection method for estimation of df. }
 }
+\value{
+ Completed dataset, updated location vector,scatter matrix, and degrees of freedom when employing the SEM and MCEM algorithms. All outputs are numeric. 
+ }
 \references{
 Kinyanjui, P. K., Tamba, C. L., Orawo, L. A. O., & Okenye, J. O. (2020). Missing data imputation in multivariate t distribution with unknown degrees of freedom using expectation maximization algorithm and its stochastic variants. Model Assisted Statistics and Applications, 15(3), 263-272.
 }
@@ -33,6 +36,8 @@ TT=Y7 #Complete Dataset
 
 #Introduce MAR Data
 Y8= MISS(TT,20) #The newly created incomplete dataset.
+Y8
+
 #Initializing Values
 mu_stat=c(0.5,1,2)
 Sigma_stat=matrix(c(0.33,0.31,0.3,0.31,0.335,0.295,0.3,0.295,0.32),3,3)
@@ -92,8 +97,9 @@ round((T_Sigma/90),4)
 
 #updated degrees of freedom  
 udf=mean(MCEMU$dfchain[11:100])
+udf
 
 #complete dataset as an average of (K-10) complete datasets for the various iterations.  
 T_Data1=  T_Data/90
-
+T_Data1
 }
