@@ -17,6 +17,9 @@ dcmvt(x, mean, sigma,df, dependent.ind, given.ind, X.given, check.sigma=TRUE, lo
  \item{check.sigma}{logical; if TRUE, the scatter matrix is checked for appropriateness (symmetry, positive-definiteness). This could be set to FALSE if the user knows it is appropriate.}
  \item{log}{logical; if TRUE, densities d are given as log(d).}
 }
+\value{
+\code{numeric}
+}  
 \references{Genz, A. and Bretz, F. (2009), Computation of Multivariate Normal and t Probabilities. Lecture Notes in Statistics, Vol. 195. Springer-Verlag, Heidelberg.
 
 S. Kotz and S. Nadarajah (2004), Multivariate t Distributions and Their Applications. Cambridge University Press. Cambridge.}
