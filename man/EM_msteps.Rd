@@ -5,7 +5,8 @@
 \description{
 The sub-package contains subroutines for imputation of missing values as well as parameter estimation (for the location vector and the scatter matrix) in multivariate t distribution using the Expectation Maximization (EM) algorithm when the degrees of freedom are known. EM algorithm iteratively imputes the missing values and computes the estimates for the multivariate t parameters in two steps (E-step and M-step) as explained in Kinyanjui et al. (2021). For a single iteration, the function \code{EM_onestep} is run. For multiple iterations, the function \code{EM_msteps} is run. The function \code{LIKE} (specifying the likelihood) facilitates the setting of tolerance level for convergence of the algorithm (that is \eqn{L(\theta^{t+1})-L(\theta^{t})\leq{\delta}}, where \eqn{\delta} is a set tolerance level and t denotes the number of iterations).
 }
-\usage{EM_msteps(Y,mu,Sigma,df,K,error)
+\usage{
+EM_msteps(Y,mu,Sigma,df,K,error)
 }
 \arguments{
     \item{Y}{the multivariate t dataset}
@@ -15,6 +16,9 @@ The sub-package contains subroutines for imputation of missing values as well as
   \item{K}{the number of iterations, which must be specified.}
    \item{error}{tolerance level for convergence of the EM algorithm.}
 }
+ \value{
+ Completed dataset (with imputed values), updated location vector, and scatter matrix. All outputs are numeric. 
+ }
 \references{
 Kinyanjui, P.K., Tamba, C.L., & Okenye, J.O. (2021). Missing Data Imputation in a t -Distribution with Known Degrees of Freedom Via Expectation Maximization Algorithm and Its Stochastic Variants. International Journal of Applied Mathematics and Statistics.
 }
@@ -33,6 +37,7 @@ TT=Y7 #Complete Dataset
 
 #Introduce MAR Data
 Y8= MISS(TT,20) #The newly created incomplete dataset.
+Y8
 
 #Initializing Values
 mu_stat=c(0.5,1,2)
