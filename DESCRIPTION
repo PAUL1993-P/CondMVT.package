@@ -1,6 +1,6 @@
 Package: CondMVT
 Type: Package
-Title: Conditional Multivariate t Distribution
+Title: Conditional Multivariate t Distribution, Expectation Maximization Algorithm, and Its Stochastic Variants
 Version: 0.1.0
 Authors@R: c(person("Paul", "Kinyanjui", role=c("aut", "cre"), 
 	   email="kinyanjui.access@gmail.com"),
